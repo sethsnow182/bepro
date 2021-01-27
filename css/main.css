@@ -1,0 +1,379 @@
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: Myriad Pro;
+}
+
+/* Header Starts Here */
+
+header {
+    background-color: #3853d8;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0px;
+
+}
+
+header li {
+    padding-left: 30px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+header a:hover {
+    color: #D90368;
+    transition: all 0.2s
+}
+
+/* Navbar Section  */
+
+#navbar {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    padding: 32px 0px;
+    flex-wrap: wrap;
+    max-width: 90%;
+}
+
+#logo {
+    flex:50%;
+}
+
+/* Nav List */
+
+nav {
+    display: flex;
+    flex:50%;
+    height: 34px;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    display: block;
+    padding: 0px!important;
+  }
+
+.hide-for-small {
+    display: none;
+  }
+
+
+.dropdown-menu.show {
+    display: block;
+    padding:0px;
+}
+
+.dropdown-menu.show li {
+    padding:0px;
+}
+
+.dropdown-menu.show a {
+    padding:10px;
+    font-size: 12px;
+}
+
+/* Log_SignIn and Cart_Search Section */
+
+#search-list  {
+    padding-top: 20px;
+    flex: 100%;
+    position: relative;
+    
+}
+
+#search-list li  {
+    padding-left: 20px;
+}
+
+
+#search-list li:nth-child(1) {
+    padding-left: 0px;
+}
+
+#search-list li:nth-child(3) {
+    padding-right: 70px;
+    padding-left: 0px;
+}
+
+#search-list li:nth-child(4) {
+    position: absolute;
+    width: 0;
+    right: 0;
+    
+}
+
+
+/* Search input*/
+
+
+.searchbar {
+    position: relative;
+    min-width: 50px;
+    width: 0%;
+    height: 34px;
+    float: right;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s
+}
+
+.searchbar-input {
+    top: 0;
+    right: 0;
+    border: 0;
+    outline: 0;
+    background: #343a40;;
+    width: 100%;
+    margin: 0;
+    padding: 0px 55px 0px 20px;
+    font-size: 12px;
+    color: #fff;
+    height: 34px;
+}
+
+.searchbar-input::-webkit-input-placeholder {
+    color: #fff
+}
+
+.searchbar-input:-moz-placeholder {
+    color: #fff
+}
+
+.searchbar-input::-moz-placeholder {
+    color: #fff
+}
+
+.searchbar-input:-ms-input-placeholder {
+    color: #fff
+}
+
+.searchbar-icon,
+.searchbar-submit {
+    width: 50px;
+    height: 34px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    font-family: verdana;
+    font-size: 22px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    background: #3853d8;
+    justify-content: flex-end;
+}
+
+.searchbar-open {
+    width: 100%
+}
+
+.searchbar-icon img {
+    vertical-align: text-bottom;
+    align-self: center;
+}
+
+/* Header MediaQueries */
+
+@media (min-width: 580px) { 
+    #navbar  {
+        max-width: 90%;
+        margin:auto;
+        flex-wrap: nowrap;
+      }
+      .nav-link {
+        display: block;
+        padding: .5rem 1rem!important;
+      }
+    .hide-for-small {
+        display: none;
+      }
+    #logo  {
+        flex: 10%;
+     }
+    nav {
+        flex: 30%;
+
+     }
+    #search-list {
+        flex: 50%;
+        }
+    header ul {
+        list-style: none;
+        display: flex;
+        padding: 0px;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        margin:0px;
+    }
+    #search-list {
+
+        padding-top:0px;
+    }
+    #search-list li:nth-child(3) {
+        padding-right: 70px;
+        padding-left: 60px;
+    }
+
+@media (min-width: 768px) { 
+        #navbar {
+            max-width: 720px;
+          }
+          header ul {
+            margin: 0px 20px;
+        }
+        
+        }
+
+@media (min-width: 992px) { 
+    #navbar {
+        max-width: 960px;
+      }
+      .hide-for-small {
+        display: flex;
+      }
+      #logo  {
+        flex: 10% ;
+     }
+    nav {
+        flex: 40%;
+
+     }
+    #search-list {
+        flex: 50%;
+        }
+    }
+
+
+@media (min-width: 1200px) { 
+    #navbar {
+        max-width: 1170px;
+      }
+    }
+
+ 
+
+
+ /* Start Carousel */
+
+ #carouselExampleDark {
+    z-index: 2;
+ }
+
+.carousel::after {
+    content: "Fashion"!important;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 150px;
+    text-transform: uppercase;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    color: #0021c4;
+}
+
+.carousel-item img {
+    width: auto!important;
+    margin: auto;
+}
+.carousel-caption {
+    bottom: 40%!important;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+    font-size: 72px;
+}
+
+.carousel-caption button {
+    background: #3853d8;
+    border: solid 1px #3853d8;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 19px;
+    width: 200px;
+    height: 50px;
+}
+
+.carousel-caption button:focus {
+    outline: none;
+}
+
+.carousel-caption button:hover {
+    background-color: #D90368;
+    border: solid 1px #D90368;
+    transition: all 0.2s
+} 
+
+.carousel-control-prev {
+    justify-content: flex-start!important;
+}
+.carousel-control-next {
+    justify-content: flex-end!important;
+}
+
+.carousel-control-next-icon {
+    color: white;
+}
+
+
+/* Carousel MediaQueries */
+
+@media (min-width: 580px) { 
+    .carousel  {
+        max-width: 90%;
+        margin:auto;
+      }
+}
+
+@media (min-width: 768px) { 
+    .carousel {
+        max-width: 720px;
+        margin:auto;
+      }
+    }
+
+@media (min-width: 992px) { 
+    .carousel {
+        max-width: 960px;
+        margin:auto;
+      }
+    }
+
+@media (min-width: 1200px) { 
+    .carousel {
+        max-width: 1170px;
+        margin:auto;
+      }
+    }
+
+/* Header Ends Here */
