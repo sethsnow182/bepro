@@ -240,6 +240,7 @@ nav {
         padding-right: 70px;
         padding-left: 60px;
     }
+}
 
 @media (min-width: 768px) { 
         #navbar {
@@ -286,22 +287,7 @@ nav {
     z-index: 2;
  }
 
-.carousel::after {
-    content: "Fashion"!important;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    font-size: 150px;
-    text-transform: uppercase;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    color: #0021c4;
-}
 
-.carousel-item img {
-    width: auto!important;
-    margin: auto;
-}
 .carousel-caption {
     bottom: 40%!important;
 }
@@ -353,6 +339,21 @@ nav {
         max-width: 90%;
         margin:auto;
       }
+      .carousel-item img {
+        width: auto!important;
+        margin: auto;
+    }
+    .carousel::after {
+        content: "Fashion"!important;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-size: 150px;
+        text-transform: uppercase;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        color: #0021c4;
+    }
 }
 
 @media (min-width: 768px) { 
@@ -377,3 +378,180 @@ nav {
     }
 
 /* Header Ends Here */
+
+/*  Main Section Starts */
+
+#main {
+    position: relative;
+    z-index: 2;
+    margin-top: -80px;
+}
+
+#wrapper {
+    margin-top: -180px;
+
+}
+
+.support {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 100px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background-color: #ffffff;
+    
+}
+
+.support .cell {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: relative;
+}
+
+.support .cell:nth-child(1)::after {
+    border-left: none;
+}
+
+
+
+
+
+.support .left {
+    margin-right: 20px;
+    margin: 0px 20px 0px -10px;
+}
+
+.support h4 {
+    color: #000000;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.support p {
+    color: #999999;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.products .cell {
+    border: 1px solid black;
+    height: 300px;
+}
+
+
+
+/* Main Section MediaQueries */
+
+@media (min-width: 0px) { 
+    #wrapper  {
+        max-width: 90%;
+        margin:auto;
+      }
+      .support {
+        grid-template-columns: repeat(1, 1fr);
+        }
+        .support .cell::after {
+            content: ' ';
+            text-decoration: none;
+            position: absolute;
+            width: 70%;
+            bottom: 0;
+            border-bottom: solid 1px #999999;
+        }
+        .support .cell::after {
+            border-left: none;
+        }
+        .support .cell:nth-child(4)::after {
+            border-bottom: none;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+        }
+        
+}
+
+@media (min-width: 580px) { 
+    #wrapper  {
+        max-width: 90%;
+        margin:auto;
+      }
+      .support .cell:nth-child(3)::after {
+        border-left: none;
+    }
+    
+}
+
+@media (min-width: 768px) { 
+    #wrapper {
+        max-width: 720px;
+        margin:auto;
+      }
+    .support {
+        grid-template-columns: repeat(2, 1fr);
+        }
+        .support .cell::after {
+            content: ' ';
+            text-decoration: none;
+            position: absolute;
+            height: 80px;
+            left: 0;
+            border-left: solid 1px #999999;
+            bottom: auto;
+        }
+        .support .cell::after {
+            border-bottom: none;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+    }
+
+@media (min-width: 992px) { 
+    #wrapper {
+        max-width: 960px;
+        margin:auto;
+      }
+      .support {
+        grid-template-columns: repeat(4, 1fr);
+        }
+        .support .cell::after,
+        .support .cell:nth-child(3)::after {
+            content: ' ';
+            text-decoration: none;
+            position: absolute;
+            height: 80px;
+            left: 0;
+            border-left: solid 1px #999999;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+        }
+        .products .cell:nth-child(6) {
+            grid-column: span 3;
+        }
+        
+    }
+
+@media (min-width: 1300px) { 
+    #wrapper {
+        max-width: 1280px;
+        margin:auto;
+       
+      }
+}
