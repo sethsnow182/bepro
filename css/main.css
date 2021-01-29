@@ -463,6 +463,10 @@ s
 
 .products .cell:hover:after { transform: scaleX(1); }
 
+.products .content {
+    height: 100%;
+}
+
 #popular-product {
     background-color: #232323;
     display: flex;
