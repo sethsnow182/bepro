@@ -41,3 +41,15 @@ $(document).ready(function(){
     $('.searchbar-icon').css('display','block');
     }
     }
+
+
+    // More or Less Button 
+    // The function toggles more (hidden) text when the user clicks on "Read more". The IF ELSE statement ensures that the text 'read more' and 'read less' changes interchangeably when clicked on.
+$('.button').click(function() {
+    $('.more').slideToggle();
+    if ($('.button').text() == "Load more") {
+      $(this).text("Load less")
+    } else {
+      $(this).text("Load more")
+    }
+  });
