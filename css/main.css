@@ -2,6 +2,7 @@ body {
     background: #ffffff;
     margin: 0;
     font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header Starts Here */
@@ -540,6 +541,7 @@ s
     top: 10%;
     position: absolute;
     font-weight: 600;
+    display:none;
 }
 
 
@@ -701,6 +703,7 @@ s
             grid-gap: 30px;
             justify-items: center;
         }
+        
 
 }
 
@@ -718,6 +721,9 @@ s
     }
     .content button {
         padding: 8px 40px;
+    }
+    .content::after {
+        display: initial;
     }
     
 }
