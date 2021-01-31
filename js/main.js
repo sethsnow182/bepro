@@ -43,37 +43,36 @@ $(document).ready(function(){
     }
 
 
-    // More or Less Button 
+    // jQuery More or Less Toggle
     // The function toggles more (hidden) text when the user clicks on "Read more". The IF ELSE statement ensures that the text 'read more' and 'read less' changes interchangeably when clicked on.
-/*
+
     $('.button').click(function() {
-    $('.more').slideToggle();
-    if ($('.button').text() == "Load more") {
-      $(this).text("Load less")
+    if ($('.button').text() == "load more") {
+      $(this).text("load less")
     } else {
-      $(this).text("Load more")
+      $(this).text("load more")
     }
+    $(".products-hidden").slideToggle();
   });
-*/
 
-  // Pure JavaScript Load More/Less
+  // Pure JavaScript More or Less Toggle
 
-  var button = document.querySelector(".button");
+  // var button = document.querySelector(".button");
   
-  button.onclick = function() {
+  // button.onclick = function() {
 
-    var elems = document.getElementsByClassName('hid');
+  //   var elems = document.getElementsByClassName('products hidden');
 
-    for (var i=0;i<elems.length;i+=1){
+  //   for (var i=0;i<elems.length;i+=1){
       
-      if (elems[i].style.display == 'block') {
-        elems[i].style.display = 'none';
-        button.innerHTML = "load more"
+  //     if (elems[i].style.display == 'grid') {
+  //       elems[i].style.display = 'none';
+  //       button.innerHTML = "load more"
 
-      } else {
+  //     } else {
 
-        elems[i].style.display = 'block';
-        button.innerHTML = "load less"
-      }
-    }
-  };
+  //       elems[i].style.display = 'grid';
+  //       button.innerHTML = "load less"
+  //     }
+  //   }
+  // };

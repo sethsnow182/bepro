@@ -440,7 +440,10 @@ s
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
+    margin-bottom: 30px;
 }
+
+
 
 .products .cell {
     border: 1px solid #d3d3d3;
@@ -611,9 +614,6 @@ s
     flex: 25%;
 }
 
-.hidden {
-    display: flex;
-}
 
 .cell .discount {
     display: none;
@@ -626,10 +626,12 @@ s
     display: block;
 }
 
-.hid {
+.products-hidden {
     display: none;
+
    
 }
+
 
 #ad {
     position: relative;
@@ -655,7 +657,7 @@ s
     font-size: 14px;
     text-decoration: none;
     font-weight: 500;
-    padding: 40px 0px;
+    margin: 10px 0px;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
@@ -665,15 +667,19 @@ s
  .button::before {
     content: url(../icons/Load\ More.png);
     position: absolute;
-    left: -20%;
-    top: 50%;
+    left: -30%;
+    top: 10%;
     height: 19px;
-    transform: translate(-50%, -50%);
+    transition-duration: 1s;
     }
 
-  .more {
-      display: none;
-  }
+
+.button:hover::before {
+    transform: rotate(180deg);
+    transition-duration: 1s;
+    height: 19px;
+    
+}
 
 
 /* Main Section MediaQueries */
@@ -792,6 +798,12 @@ s
             background-color: pink;
             grid-row: 3 / 5; grid-column: 1 / 4;
         }
+        .products-hidden .cell:nth-child(6) {
+            grid-column: initial!important;
+            background-color: white!important;
+
+        }
+        
         #main {
             margin-top: -80px;
         }
@@ -809,6 +821,8 @@ s
             padding: 10px 0px 25px 0px;
             font-weight: 500!important;   
     }
+
+}
 
 @media (min-width: 1300px) { 
     #wrapper {
@@ -828,3 +842,6 @@ s
     
 }
 
+#slideshow {
+    margin-top: 30px;
+}
