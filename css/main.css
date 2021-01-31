@@ -626,6 +626,10 @@ s
     display: block;
 }
 
+.hidden {
+    display: flex;
+}
+
 .products-hidden {
     display: none;
 

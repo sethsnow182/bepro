@@ -55,7 +55,7 @@ $(document).ready(function(){
     $(".products-hidden").slideToggle();
   });
 
-  // Pure JavaScript More or Less Toggle
+  // Pure JavaScript More or Less
 
   // var button = document.querySelector(".button");
   
