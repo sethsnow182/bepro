@@ -626,6 +626,17 @@ s
     display: block;
 }
 
+.hid {
+    display: none;
+   
+}
+
+    
+@-prefix-keyframes slide {
+    from {height: 0;}
+    to {height: 300px;}
+}
+
 #ad {
     position: relative;
     background: none;
