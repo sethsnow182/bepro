@@ -295,7 +295,7 @@ nav {
 
 .carousel-caption h5 {
     color: #fff;
-    font-size: 72px;
+    font-size: 10vw;
 }
 
 .carousel-caption button {
@@ -303,12 +303,12 @@ nav {
     border: solid 1px #3853d8;
     color: white;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 12px;
     letter-spacing: 1px;
     font-weight: 500;
     border-radius: 19px;
-    width: 200px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
 }
 
 .carousel-caption button:focus {
@@ -355,6 +355,22 @@ nav {
         transform: translate(-50%, -50%);
         color: #0021c4;
     }
+    .carousel-caption h5 {
+        font-size: 72px;    
+    }
+    .carousel-caption button {
+        background: #3853d8;
+        border: solid 1px #3853d8;
+        color: white;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 500;
+        border-radius: 19px;
+        width: 200px;
+        height: 50px;
+    }
+
 }
 
 @media (min-width: 768px) { 
@@ -871,16 +887,56 @@ s
     width: 100%!important;
 }
 
+.carousel-indicators {
+    
+  
+}
+
+
 .carousel-indicators li {
     height: 8px!important;
     width: 8px!important;
     border-radius: 50%;
+    
+}
+
+.carousel-caption {
+
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    color: #fff;
+    text-align: center;
+    top: 40%!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+
+}
+
+.carousel-caption h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.carousel-caption p:nth-child(2) {
+    font-size: 36px;
+    margin: 0px;
+    font-weight: 600;
+}
+   
+
+.carousel-caption p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 700;
 }
 
 
-.products-hidden .products {
-    margin-bottom: 0px!important;
-}
+
+
+
 
 
 .adjust {
@@ -901,3 +957,38 @@ s
 .carousel-control-prev {
     opacity: initial!important;
 } 
+
+
+@media (min-width: 768px) { 
+   
+.carousel-caption p:nth-child(2) {
+    font-size: 25px;
+    margin: 0px;
+    font-weight: 600;
+}
+   
+
+.carousel-caption p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 700;
+}
+        
+    }
+
+    @media (min-width: 992px) { 
+   
+        .carousel-caption p:nth-child(2) {
+            font-size: 36px;
+            margin: 0px;
+            font-weight: 600;
+        }
+           
+        
+        .carousel-caption p:nth-child(3) {
+            font-size: 16px;
+            font-weight: 700;
+        }
+                
+            }
+        
+
