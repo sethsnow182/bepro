@@ -1218,7 +1218,7 @@ s .support .cell:nth-child(1)::after {
 }
 
 #blog .add-flex .item-right p::before {
-  content: url(/www/icons/clock.png);
+  content: url(../icons/clock.png);
   vertical-align: middle;
   padding-right: 8px;
 }
@@ -1239,7 +1239,7 @@ s .support .cell:nth-child(1)::after {
 }
 
 #blog .views p:nth-child(1)::before {
-  content: url(/www/icons/message.png);
+  content: url(../icons/message.png);
   vertical-align: middle;
   padding-right: 8px;
 }
@@ -1251,7 +1251,7 @@ s .support .cell:nth-child(1)::after {
 }
 
 #blog .views p:nth-child(2)::before {
-  content: url(/www/icons/heart.png);
+  content: url(../icons/heart.png);
   vertical-align: middle;
   padding-right: 8px;
 }
