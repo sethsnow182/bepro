@@ -1049,6 +1049,7 @@ s .support .cell:nth-child(1)::after {
   display: flex;
   justify-content: space-between;
   height: 500px;
+  flex-wrap: wrap;
 }
 
 #blog .left {
@@ -1058,6 +1059,7 @@ s .support .cell:nth-child(1)::after {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  display: none;
 }
 
 #blog .left:before {
@@ -1136,7 +1138,7 @@ s .support .cell:nth-child(1)::after {
 #blog .add-flex {
   display: flex;
   padding: 50px;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #blog .add-flex p {
@@ -1191,7 +1193,7 @@ s .support .cell:nth-child(1)::after {
 }
 
 #blog .item-right {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 30px;
@@ -1292,4 +1294,52 @@ s .support .cell:nth-child(1)::after {
   background-image: url(../icons/chevron-left.svg);
   width: 1rem;
   height: 1rem;
+}
+
+/* Media Queries Blog Section */
+
+@media (min-width: 0px) {
+  #blog .wrapper {
+    justify-content: center;
+  }
+  #blog .left {
+    display: flex;
+  }
+  #blog .right {
+    display: none;
+    width: auto;
+  }
+  #blog #carouselExampleCaption {
+    width: 954px;
+  }
+}
+
+@media (min-width: 768px) {
+  #blog .right {
+    display: flex;
+  }
+  #blog .item-right {
+    display: none;
+  }
+  #blog .left {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #blog .item-right {
+    display: flex;
+  }
+  #blog .right {
+    width: 954px;
+  }
+}
+
+@media (min-width: 1300px) {
+  #blog .left {
+    display: flex;
+  }
+  #blog .wrapper {
+    justify-content: space-between;
+  }
 }
