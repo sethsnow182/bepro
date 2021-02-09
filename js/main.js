@@ -78,23 +78,31 @@ $(document).ready(function(){
   // };
 
 
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 4,
-    direction: getDirection(),
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
-      }
-    }
-  });
+ var swiper = new Swiper('.swiper-container', {
+      breakpoints: {
+        // when window width is >= 320px
+        0: {
+          slidesPerView: 1,
+        },
+        
+         // when window width is >= 480px
+        580: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 480px
+        992: {
+          slidesPerView: 3,
+        },
+        // when window width is >= 640px
+        1300: {
+          slidesPerView: 4,
+        }
+      },
+      
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-
-    return direction;
-  }
+  

@@ -1347,7 +1347,7 @@ s .support .cell:nth-child(1)::after {
 /* Slider Logos */
 
 #logos {
-  display: none;
+  margin: 80px 0px;
 }
 
 .swiper-container {
@@ -1379,9 +1379,37 @@ s .support .cell:nth-child(1)::after {
   align-items: center;
 }
 
-@media (min-width: 1300px) {
-  #logos {
-    display: block;
-    margin: 80px 0px;
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: url(../icons/logo_left.png) !important;
+}
+
+.swiper-button-prev:hover::after {
+  content: url(../icons/logo_left_hover.png) !important;
+}
+
+.swiper-button-next:hover::after {
+  content: url(../icons/logo_right_hover.png) !important;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: url(../icons/logo_right.png) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 40% !important;
+}
+
+@media (max-width: 580px) {
+  .swiper-slide img {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 320px) {
+  .swiper-slide img {
+    max-width: 100px;
   }
 }
