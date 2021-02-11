@@ -41,3 +41,68 @@ $(document).ready(function(){
     $('.searchbar-icon').css('display','block');
     }
     }
+
+
+    // jQuery More or Less Toggle
+    // The function toggles more (hidden) text when the user clicks on "Read more". The IF ELSE statement ensures that the text 'read more' and 'read less' changes interchangeably when clicked on.
+
+    $('.button').click(function() {
+    if ($('.button').text() == "load more") {
+      $(this).text("load less")
+    } else {
+      $(this).text("load more")
+    }
+    $(".products-hidden").slideToggle();
+  });
+
+  // Pure JavaScript More or Less
+
+  // var button = document.querySelector(".button");
+  
+  // button.onclick = function() {
+
+  //   var elems = document.getElementsByClassName('products hidden');
+
+  //   for (var i=0;i<elems.length;i+=1){
+      
+  //     if (elems[i].style.display == 'grid') {
+  //       elems[i].style.display = 'none';
+  //       button.innerHTML = "load more"
+
+  //     } else {
+
+  //       elems[i].style.display = 'grid';
+  //       button.innerHTML = "load less"
+  //     }
+  //   }
+  // };
+
+
+ var swiper = new Swiper('.swiper-container', {
+      breakpoints: {
+        // when window width is >= 320px
+        0: {
+          slidesPerView: 1,
+        },
+        
+         // when window width is >= 480px
+        580: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 480px
+        992: {
+          slidesPerView: 3,
+        },
+        // when window width is >= 640px
+        1300: {
+          slidesPerView: 4,
+        }
+      },
+      
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+  
