@@ -88,26 +88,26 @@ nav {
 
 /* Log_SignIn and Cart_Search Section */
 
-#search-list {
+.search-list {
   padding-top: 20px;
   flex: 100%;
   position: relative;
 }
 
-#search-list li {
+.search-list li {
   padding-left: 20px;
 }
 
-#search-list li:nth-child(1) {
+.search-list li:nth-child(1) {
   padding-left: 0px;
 }
 
-#search-list li:nth-child(3) {
+.search-list li:nth-child(3) {
   padding-right: 70px;
   padding-left: 0px;
 }
 
-#search-list li:nth-child(4) {
+.search-list li:nth-child(4) {
   position: absolute;
   width: 0;
   right: 0;
@@ -213,7 +213,7 @@ nav {
   nav {
     flex: 30%;
   }
-  #search-list {
+  .search-list {
     flex: 50%;
   }
   header ul {
@@ -225,10 +225,10 @@ nav {
     position: relative;
     margin: 0px;
   }
-  #search-list {
+  .search-list {
     padding-top: 0px;
   }
-  #search-list li:nth-child(3) {
+  .search-list li:nth-child(3) {
     padding-right: 70px;
     padding-left: 60px;
   }
@@ -256,7 +256,7 @@ nav {
   nav {
     flex: 40%;
   }
-  #search-list {
+  .search-list {
     flex: 50%;
   }
 }
@@ -1677,5 +1677,124 @@ input#btn:hover {
 @media (min-width: 1200px) {
   #wrapper-footer {
     max-width: 1170px;
+  }
+}
+
+/* Toogle button */
+
+#header .Navbar__ToggleShow {
+}
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+.Navbar__Link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Media Query Toogle button */
+
+@media (max-width: 768px) {
+  #nav-item-dropdown .dropdown-item {
+    padding-right: 10px !important;
+  }
+  .Navbar__Items {
+    flex-direction: column;
+  }
+  #navbar li {
+    height: 34px;
+    width: 100%;
+    padding-left: 0px;
+  }
+  #navbar a {
+    padding: 0px !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    padding-top: 5px;
+  }
+
+  #navbar a:hover {
+  }
+
+  .dropdown-menu.show {
+    top: 0px !important;
+    right: 0px !important;
+  }
+
+  .Navbar__Items {
+    display: none;
+  }
+  .search-list {
+    display: none;
+    padding: 10px 0px;
+  }
+
+  .search-list ul {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .search-list li:nth-child(3) {
+    padding: 0px;
+  }
+
+  .searchbar {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .Navbar__ToggleShow {
+    display: flex;
+    flex: 100%;
+    border-top: 5px solid #fff;
+    margin-top: 10px;
+  }
+
+  .Navbar__ToggleShowSecond {
+    display: flex;
+    flex: 100%;
+    border-bottom: 5px solid #fff;
+    padding: 0px;
+  }
+
+  .Navbar__ToggleShow ul {
+    flex-direction: column;
+  }
+  .Navbar__ToggleShow #nav-item-dropdown {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .Navbar__ToggleShow li a {
+    padding-right: 0px !important;
+  }
+  .Navbar__ToggleShow .searchbar {
+    position: relative;
+  }
+
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: flex;
+    cursor: pointer;
+    flex: 50%;
+    justify-content: flex-end;
+  }
+  #navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  #logo {
+    flex: 50%;
+  }
+  .dropdown-menu[style] {
+    inset: auto !important;
+    transform: translate(1px, 34px) !important;
   }
 }
