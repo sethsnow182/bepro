@@ -105,4 +105,22 @@ $(document).ready(function(){
       },
     });
 
+
+//Toggle button
+
+function classToggle() {
+  const navs = document.querySelectorAll('.Navbar__Items')
+  const navsNew = document.querySelectorAll('.search-list')
+  const tog = document.querySelectorAll('.home')
+  
+  navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+  navsNew.forEach(nav => nav.classList.toggle('Navbar__ToggleShowSecond'));
+  tog.forEach(nav => nav.classList.toggle('Navbar__ToggleShowHead'));
+
+
+}
+
+document.querySelector('.Navbar__Link-toggle')
+  .addEventListener('click', classToggle);
+
   
