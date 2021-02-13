@@ -29,6 +29,7 @@ header a {
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
+  position: relative;
 }
 
 header a:hover {
@@ -111,6 +112,20 @@ nav {
   position: absolute;
   width: 0;
   right: 0;
+}
+
+.cart-badge {
+  position: absolute;
+  bottom: -16px;
+  left: 12px;
+  padding: 4px 7px;
+  line-height: normal;
+  font-weight: 700;
+  background: #fff;
+  border-radius: 20px;
+  color: #3853d8;
+  font-size: 10px;
+  letter-spacing: 0px;
 }
 
 /* Search input*/
@@ -832,18 +847,12 @@ s .support .cell:nth-child(1)::after {
   max-width: 100%;
 }
 
-#slideshow .carousel-inner {
-}
-
 .carousel-item {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out !important;
 }
 
 #slideshow .carousel-item img {
   width: 100% !important;
-}
-
-.carousel-indicators {
 }
 
 .carousel-indicators li {
@@ -1682,9 +1691,6 @@ input#btn:hover {
 
 /* Toogle button */
 
-#header .Navbar__ToggleShow {
-}
-
 .Navbar__Link-toggle {
   display: none;
 }
@@ -1717,9 +1723,6 @@ input#btn:hover {
     width: 100%;
     justify-content: flex-end;
     padding-top: 5px;
-  }
-
-  #navbar a:hover {
   }
 
   .dropdown-menu.show {
