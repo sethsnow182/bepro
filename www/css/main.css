@@ -1798,6 +1798,11 @@ input#btn:hover {
     inset: auto !important;
     transform: translate(1px, 34px) !important;
   }
+  .cart-badge {
+    bottom: -5px !important;
+    right: -3px !important;
+    left: inherit;
+  }
 }
 
 /* Scroll to up button */
