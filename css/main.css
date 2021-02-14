@@ -1912,7 +1912,7 @@ form .text.display {
 }
 
 .search {
-  background: url(/img/Search.png) no-repeat;
+  background: url(../img/Search.png) no-repeat;
   border: none;
   outline: none;
   height: 24px;
