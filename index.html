@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/98c2c63fae.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -54,10 +55,11 @@
             <ul>
                 <li><a href="#">Log In</a></li>
                 <li><a href="#">Sign Up</a></li>
-                <li><a href="#"><img id="cart" src="img/Cart.png" alt="Cart"><span class="cart-badge">0</span></a></li>
-                <form class="searchbar"> <input type="search" placeholder="Search here" name="search"
-                     class="searchbar-input" onkeyup="buttonUp();" required> <input type="submit" class="searchbar-submit" value="GO">
-                      <span class="searchbar-icon"><img src="img/Search.png" alt="search"></i></span> </form>
+                <li><a href="#/"><img id="cart" src="img/Cart.png" alt="Cart"><span class="cart-badge">0</span></a></li>
+                <form class="form-search">
+                  <input class="text" type="text" value="" placeholder="Search"/>
+                  <input class="search" type="button" value=""/>
+                </form>
             </ul>
         </div>
     </div>
