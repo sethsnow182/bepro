@@ -7,20 +7,25 @@ $('.search').click(function() {
     if ($('.form-search').hasClass('closed')) {
       $('.form-search').removeClass('closed').addClass('opened');
       $(".text").addClass("display");
-      $('input.seabutton').attr('type', "button");
+      $('input.searc:button').attr('type', "button");
   } else if ($('.form-search').hasClass('opened') &&  ($('.text').val() == ""))  {
       $('.form-search').addClass('closed').removeClass('opened');
       $(".text").removeClass("display");
-      $('input.seabutton').attr('type', "button");
+      $('input.search:button').attr('type', "button");
 
   } else  {
-      $('input.seabutton').attr('type', "submit");
+      $('input.search:button').attr('type', "submit");
   
   }
+  });
 
 });
 
+// Basket Toggle
+$("#cart").click(function(){
+  $(".drop-basket").toggleClass("extra");
 });
+
 
 
     // jQuery More or Less Toggle

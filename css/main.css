@@ -1689,6 +1689,20 @@ input#btn:hover {
 /* Media Query Toogle button */
 
 @media (max-width: 768px) {
+  .drop-basket {
+    top: 100%;
+  }
+  .search-list form {
+    height: 50px;
+    width: 100% !important;
+  }
+  .search-list .text {
+    top: 6px !important;
+  }
+  form .text.display {
+    width: calc(100% - 40px) !important;
+    top: 6px !important;
+  }
   #nav-item-dropdown .dropdown-item {
     padding-right: 10px !important;
   }
@@ -1729,6 +1743,7 @@ input#btn:hover {
 
   .search-list li:nth-child(3) {
     padding: 0px;
+    height: 50px !important;
   }
 
   .searchbar {
@@ -1888,18 +1903,20 @@ body {
 }
 
 .search-list .text {
-  top: 0;
-  right: 0;
   border: 0;
   outline: 0;
   background: #343a40;
-  width: 0%;
+  width: 0px;
   margin: 0;
   font-size: 12px;
   color: #fff;
   height: 34px;
   visibility: hidden;
   padding: 0px;
+  position: absolute;
+  top: -5px;
+  right: 40px;
+  transition: all 0.2s;
 }
 
 form .text.display {
@@ -1909,6 +1926,7 @@ form .text.display {
   top: -5px;
   right: 40px;
   padding-left: 20px;
+  transition: all 0.2s;
 }
 
 .search {
@@ -1922,4 +1940,30 @@ form .text.display {
 
 .fas {
   color: #fff;
+}
+
+.drop-basket {
+  z-index: 10001;
+  margin: 20px 0px;
+  padding: 8px 5px 16px;
+  min-width: 360px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  right: 0px;
+  min-height: 165px;
+  display: none;
+  color: #3853d8;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.drop-basket.extra {
+  display: flex;
+  justify-content: center;
+}
+
+.drop-basket li {
 }

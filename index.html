@@ -19,7 +19,7 @@
     <!--    NavBar Section Starts    -->
     <div id="navbar">
         <div id="logo">
-            <img src="img/Be.Pro.png" alt="logo">
+            <a href="#"><img src="img/Be.Pro.png" alt="logo"></a>
         </div>
         <!-- Toggle button -->
         <div class="Navbar__Link Navbar__Link-toggle">
@@ -55,9 +55,16 @@
             <ul>
                 <li><a href="#">Log In</a></li>
                 <li><a href="#">Sign Up</a></li>
-                <li><a href="#/"><img id="cart" src="img/Cart.png" alt="Cart"><span class="cart-badge">0</span></a></li>
+                <li>
+                  <a id="cart" href="#">
+                    <img src="img/Cart.png" alt="Cart"><span class="cart-badge">0</span>
+                  </a>
+                  <ul class="drop-basket">
+                    <li class="empty">Empty Basket</li>
+                  </ul>
+                </li>
                 <form class="form-search">
-                  <input class="text" type="text" value="" placeholder="Search"/>
+                  <input class="text" type="text" value="" placeholder="Search" required/>
                   <input class="search" type="button" value=""/>
                 </form>
             </ul>
