@@ -1,46 +1,31 @@
-$(document).ready(function(){
-    var submitIcon = $('.searchbar-icon');
-    var inputBox = $('.searchbar-input');
-    var searchbar = $('.searchbar');
-    var isOpen = false;
+//Search Toggle Input by Me!
+$( document ).ready(function() {
 
-    submitIcon.click(function() {
-        if(isOpen == false) {
-        searchbar.addClass('searchbar-open');
-        inputBox.focus();
-        isOpen = true;
-         } else {
-        searchbar.removeClass('searchbar-open');
-        inputBox.focusout();
-        isOpen = false;
-    }
-    });
+$('.form-search').addClass('closed');
 
-    submitIcon.mouseup(function(){
-    return false;
-    });
-    searchbar.mouseup(function(){
-    return false;
-    });
-    $(document).mouseup(function(){
-    if(isOpen == true){
-    $('.searchbar-icon').css('display','block');
-    submitIcon.click();
-    }
-    });
+$('.search').click(function() {
+    if ($('.form-search').hasClass('closed')) {
+      $('.form-search').removeClass('closed').addClass('opened');
+      $(".text").addClass("display");
+      $('input.searc:button').attr('type', "button");
+  } else if ($('.form-search').hasClass('opened') &&  ($('.text').val() == ""))  {
+      $('.form-search').addClass('closed').removeClass('opened');
+      $(".text").removeClass("display");
+      $('input.search:button').attr('type', "button");
 
-    });
-    
-    function buttonUp(){
-    var inputVal = $('.searchbar-input').val();
-    inputVal = $.trim(inputVal).length;
-    if( inputVal !== 0){
-    $('.searchbar-icon').css('display','none');
-    } else {
-    $('.searchbar-input').val('');
-    $('.searchbar-icon').css('display','block');
-    }
-    }
+  } else  {
+      $('input.search:button').attr('type', "submit");
+  
+  }
+  });
+
+});
+
+// Basket Toggle
+$("#cart").click(function(){
+  $(".drop-basket").toggleClass("extra");
+});
+
 
 
     // jQuery More or Less Toggle
