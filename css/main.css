@@ -1038,6 +1038,7 @@ s .support .cell:nth-child(1)::after {
 
 #blog {
   margin: 30px 0px;
+  scroll-behavior: smooth;
 }
 
 #blog .wrapper {

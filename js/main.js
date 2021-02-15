@@ -26,6 +26,13 @@ $("#cart").click(function(){
   $(".drop-basket").toggleClass("extra");
 });
 
+// Scroll all a href
+$('.hide-for-small').find('a').click(function(){
+  $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top
+  }, 500);
+  return false;
+});
 
 
     // jQuery More or Less Toggle
